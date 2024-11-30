@@ -1,4 +1,4 @@
-package com.phoringit.pmart_delivery
+package com.sixamtech.delivery
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -77,7 +77,7 @@ class AuthService implements AuthServiceInterface {
   Future<Response> forgotPassword(String? countryCode, String? phone) async{
     Response _response = await authRepoInterface.forgotPassword(countryCode, phone);
     if (_response.statusCode == 200) {
-      showCustomSnackBarWidget('otp_send_successfully'.tr, isError: false);
+      showCustomSnackBarWidget(_response.body['message'], isError: false);
     } else {
       ApiChecker.checkApi(_response);
     }

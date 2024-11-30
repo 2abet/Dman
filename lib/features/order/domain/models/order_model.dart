@@ -31,6 +31,7 @@ class OrderModel {
   bool? isPause;
   ShippingAddress? shippingAddress;
   bool? isGuest;
+  bool? isShippingFree;
 
   OrderModel(
       {this.id,
@@ -62,6 +63,7 @@ class OrderModel {
         this.isPause,
         this.shippingAddress,
         this.isGuest,
+        this.isShippingFree
       });
 
   OrderModel.fromJson(Map<String, dynamic> json) {
@@ -120,7 +122,7 @@ class OrderModel {
         ? ShippingAddress.fromJson(json['shipping_address'])
         : null;
 
-
+    isShippingFree = json['is_shipping_free'] ?? false;
   }
 
   Map<String, dynamic> toJson() {

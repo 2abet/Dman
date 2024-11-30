@@ -138,7 +138,7 @@ class GeneralInfoWidget extends StatelessWidget {
                     hintText: '${profileController.profileModel!.identityNumber} (${profileController.profileModel!.identityType})',
                   ),
 
-                  profileController.profileModel!.identityImageFullUrl != null ?
+                  profileController.profileModel!.identityImageFullUrl != null && ( profileController.profileModel!.identityImageFullUrl != null && profileController.profileModel!.identityImageFullUrl!.isNotEmpty) ?
                   Padding(
                     padding:  EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                     child: Row(children: [

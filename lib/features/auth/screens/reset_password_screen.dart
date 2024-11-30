@@ -51,7 +51,7 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
       }
       else if (_password != _confirmPassword) {
        showCustomSnackBarWidget('password_not_match'.tr);
-      } else if(Get.find<ProfileController>().isPasswordValid()){
+      } else if(!Get.find<ProfileController>().isPasswordValid()){
         showCustomSnackBarWidget('enter_valid_password'.tr);
       } else {
         Get.find<ProfileController>().resetPassword(widget.mobileNumber,

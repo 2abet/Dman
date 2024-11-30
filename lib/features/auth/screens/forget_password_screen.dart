@@ -90,6 +90,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
 
                    SizedBox(height: Dimensions.paddingSizeLarge),
+
                   !authController.isLoading?
                   CustomButtonWidget(
                     btnTxt: 'send_otp'.tr,

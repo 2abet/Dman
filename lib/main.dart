@@ -34,10 +34,10 @@ Future<void> main() async {
   if(Firebase.apps.isEmpty){
     if(Platform.isAndroid){
       await Firebase.initializeApp(options: const FirebaseOptions(
-          apiKey: "AIzaSyCXF9AXxyIO7d6G6OgD7uUxyP_6Wx6IgCM",
-          projectId: "phoringsmsbd",
-          messagingSenderId: "152950504609",
-          appId: "1:152950504609:android:a2da435f4a259c2c6e84e0"
+          apiKey: "current_key here",
+          projectId: "project_id here",
+          messagingSenderId: "project_number here",
+          appId: "mobilesdk_app_id here"
       ));
     }else{
       await Firebase.initializeApp();

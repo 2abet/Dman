@@ -73,10 +73,12 @@ class _OrderStatusUpdateDialogWidgetState extends State<OrderStatusUpdateDialogW
                     borderRadius: BorderRadius.circular(50),
                     border: Border.all(width: .5, color: Theme.of(context).hintColor.withOpacity(.7))),
                   child: DropdownButton<String>( menuMaxHeight: 300,
-
                     hint: orderController.reasonValue == ''? Text('select_reason'.tr, style: rubikRegular,) :
-                    Text(orderController.reasonValue!.tr,
-                      style: rubikRegular.copyWith(fontSize: Dimensions.fontSizeSmall),),
+                    Text(orderController.reasonValue!.tr, textAlign: TextAlign.justify,
+                      style: rubikRegular.copyWith(fontSize: Dimensions.fontSizeSmall, height: 1)),
+
+
+
                     items: orderController.reasonList.map((String value) {
                       return DropdownMenuItem<String>(
                         alignment: Alignment.centerLeft,

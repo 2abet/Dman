@@ -77,10 +77,11 @@ class VerificationScreen extends StatelessWidget {
                       style: rubikMedium.copyWith(color:Get.isDarkMode? Theme.of(context).hintColor:
                       Theme.of(context).primaryColor.withOpacity(.75)))))]),
 
-              Padding(padding:  EdgeInsets.only(top : Dimensions.paddingSizeSmall),
-                  child: Text('otp_will_expired_after_2_minute'.tr,
-                    style: rubikRegular.copyWith(fontSize: Dimensions.fontSizeSmall,
-                        color: Theme.of(context).hintColor.withOpacity(.75)),)),
+              // Padding(padding:  EdgeInsets.only(top : Dimensions.paddingSizeSmall),
+              //     child: Text('otp_will_expired_after_2_minute'.tr,
+              //       style: rubikRegular.copyWith(fontSize: Dimensions.fontSizeSmall,
+              //           color: Theme.of(context).hintColor.withOpacity(.75)),)),
+
               const SizedBox(height: 50),
 
               !authController.willPhoneNumberVerificationButtonLoading ?

@@ -134,10 +134,13 @@ class AuthController extends GetxController implements GetxService {
     _pickedFile = null;
   }
 
-  Future <Response> forgotPassword(String? countryCode ,String? phone) async {
+  Future <Response> forgotPassword(String? countryCode, String? phone) async {
     _isLoading = true;
     update();
     Response _response = await authServiceInterface.forgotPassword(countryCode, phone);
+
+    print("====1234===>>${_response.body}");
+
     _isLoading = false;
     update();
     return _response;

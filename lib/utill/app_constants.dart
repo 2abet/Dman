@@ -2,11 +2,12 @@ import 'package:sixvalley_delivery_boy/features/language/domain/models/language_
 import 'images.dart';
 
 class AppConstants {
-  static const String companyName = 'E-PHORING';
-  static const String appName = 'E-PHORING DMAN';
-  static const String appVersion = '3.10';
+  static const String companyName = '6valley';
+  static const String appName = 'Deliveryman';
+  static const String appVersion = '3.12.1'; ///Flutter SDK: 3.24.3
   static const String polylineMapKey = 'MAP_KEY';
-  static const String baseUri = 'http://ephoring.com.bd';
+
+  static const String baseUri = 'Your_Base_URL';
 
   static const String profileUri = '/api/v2/delivery-man/info';
   static const String configUri = '/api/v1/config';

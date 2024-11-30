@@ -121,6 +121,10 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                     }
                   }
 
+                  if(widget.orderModel?.isShippingFree ?? false){
+                    deliveryCharge = 0;
+                  }
+
                   _subTotal = _itemsPrice + _tax - _discount;
                   totalPrice = _subTotal  + deliveryCharge! - orderModel!.discountAmount!;
                 }
@@ -149,8 +153,8 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                         child: CustomerWidget(orderModel: orderModel)),
             
             
-                      PaymentInfoWidget(itemsPrice: _itemsPrice,tax: _tax,subTotal: _subTotal,
-                        discount: _discount,deliveryCharge: deliveryCharge, totalPrice: totalPrice,),
+                      PaymentInfoWidget(itemsPrice: _itemsPrice, tax: _tax, subTotal: _subTotal,
+                        discount: _discount, deliveryCharge: widget.orderModel!.isShippingFree == true ? 0 : deliveryCharge, totalPrice: totalPrice),
             
                       Padding(padding:  EdgeInsets.only(top: Dimensions.paddingSizeSmall),
                         child: Container(decoration: BoxDecoration(
